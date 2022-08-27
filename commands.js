@@ -40,7 +40,7 @@ async function ytinfo(name) {
         let views = arama[0].views;
         let author = arama[0].author.name;
         let url = arama[0].url
-        let result = { msg : '╔══[🐶𝙱𝙾𝙱𝙸𝚉 𝙱𝙾𝚃🐕]══╗\n╠  *📥YT DOWNLOADER تحميل الفيديوات من اليوتوب📤*  ╣\n╚═════════════╝\n\n║📽️ɴᴀᴍᴇ: ' + title2 + '\n\n║👁️ᴠɪᴇᴡs: ' + views + '\n\n║📹 ᴄʜᴀɴɴᴇʟ: ' + author + '\n\n║🖇️ᴜʀʟ: ' + url + '\n\n╚═══════════◈' , 
+        let result = { msg : '╔══[🕋YMTWINS🕋]══╗\n╠  *📥YT DOWNLOADER تحميل الفيديوات من اليوتوب📤*  ╣\n╚═════════════╝\n\n║📽️ɴᴀᴍᴇ: ' + title2 + '\n\n║👁️ᴠɪᴇᴡs: ' + views + '\n\n║📹 ᴄʜᴀɴɴᴇʟ: ' + author + '\n\n║🖇️ᴜʀʟ: ' + url + '\n\n╚═══════════◈' , 
                       thumbnail : thumbnail ,
                       yuturl: url }
         return result
@@ -89,7 +89,7 @@ mek = mek.messages[0]
          try {
 		await conn.sendMessage(from , { audio : fs.readFileSync("./src/alive.mpeg") , mimetype : 'audio/mpeg' , ptt: true  } , { quoted: mek })
               var alivemsg = ''
-              if (config.ALIVEMSG == 'default') alivemsg = '```👋 Hi! I am online now. مرحبا أنا متصل الان في خدمتك سيدي😉```'
+              if (config.ALIVEMSG == 'default') alivemsg = '```👋 Hi! I am online now. مرحبا بك أنا متصل الان على ودك😉```'
               if ( config.ALIVEMSG !== 'default') alivemsg = config.ALIVEMSG
               const templateButtons = [
               { urlButton: {displayText: config.URL_1NAME , url: config.URL_1LINK }},
@@ -133,11 +133,11 @@ mek = mek.messages[0]
 	       const cstic = await conn.sendMessage(from , { text: 'creating' }, { quoted: mek } )  
 	       var nameMp4 = getRandom('')
 	       isQuotedVideo ? await v.quoted.download(nameMp4) : await v.download(nameMp4)
-         writeExif(stik, {packname: config.STIC_WM , author: ''})
+         writeExif(stik, {packname: config.STIC_WM , author: 'AMARIRxMEHDI'})
 		     .then(x => v.replyS(x))
          await conn.sendMessage(from, { delete: cstic.key })
          } else {
-	       v.reply('أين هي الصورة او الفيديو الذي تود ان تحوله للملصق يا عزيزي')
+	       v.reply('ياك بغيتي تحول تصويرة لستيكرز إوا صيفطها و سحبها لجنب بحال الى بغيتي تكتب عليها شي كاجا و كتب نقطةsticker')
         }
               break 
    // _ _ _ _ _ _ _ _ __  _ _ _ _ _ _  __  _ _ _ __ _  __ _  _ _ _ _ __ _ _  __  __ _  _ __  _ __ _ _ _  _ __ _  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ __  __ _  __ _ _ _ _   //      
@@ -200,7 +200,7 @@ mek = mek.messages[0]
 	      case "mediafire" :
 	      case "mfire" : 
 		try {
-		if (!q) return await conn.sendMessage(from , { text: 'أين هو رابط الميديافاير الدي تود تحميله يا عزيزي' }, { quoted: mek } )
+		if (!q) return await conn.sendMessage(from , { text: 'فين هو الرابط ديال ميديافاير نسيتيه ' }, { quoted: mek } )
 		if (!q.includes('mediafire.com/file')) return await conn.sendMessage(from , { text: 'need mediafire link' }, { quoted: mek } )
 		const data = await axios.get('https://api-bobiz.herokuapp.com/api/mfire?url=' + q)
 		const file = data.data
@@ -212,7 +212,7 @@ mek = mek.messages[0]
   await conn.sendMessage(from, { delete: filedown.key })	
 		} 
 		catch(e) {
-			await conn.sendMessage(from , { text: 'تعذر تحميل الملف آسف صديقي\n\n' + e }, { quoted: mek } )
+			await conn.sendMessage(from , { text: 'سمحلينا منقدروش ندخلو هاد الملف حيث فيه خطر على الجهاز ديالك فيه فيروس كيشكل خطر على الهاتف\n\n' + e }, { quoted: mek } )
 		}
 		      
 	      break
@@ -225,7 +225,7 @@ mek = mek.messages[0]
 	      case "instagram" :
               case "insta":
 		try {
-		if (!q) return await conn.sendMessage(from , { text: 'أين هو رابط فيديو انستغرام الدي تود تحميله عزيزي ' }, { quoted: mek } )
+		if (!q) return await conn.sendMessage(from , { text: ' فين هو الرابط ديال الفيديو ' }, { quoted: mek } )
 		if (!q.includes('instagram.com')) return await conn.sendMessage(from , { text: 'need instagram link' }, { quoted: mek } )
 		const data = await axios.get('https://api-bobiz.herokuapp.com/api/ig?url=' + q)
 		const file = data.data[0]
@@ -274,7 +274,7 @@ mek = mek.messages[0]
 	     if (!q) return await conn.sendMessage(from , { text: 'need fb link  اين هو رابط فيديو الفيسبوك الذي تريد تحميله' }, { quoted: mek } )      
 	     const isfb = q.includes('facebook.com')? q.includes('facebook.com') : q.includes('fb.watch')? q.includes('fb.watch') : ''
              if (!isfb) return await conn.sendMessage(from , { text: 'need fb link' }, { quoted: mek } )  
-		const msg = '╔══[🐶𝙱𝙾𝙱𝙸𝚉 𝙱𝙾𝚃🐕]══╗\n╠  *📥FB DOWNLOADER📤*  ╣\n╚═════════════╝\n\n║ اختر الجودة التي تريدها \n\n╚═════════════◈'
+		const msg = '╔══[🕋YMTWINS🕋]══╗\n╠  *📥FB DOWNLOADER📤*  ╣\n╚═════════════╝\n\n║ اختار الكاليطي ليبغيتي📱 \n\n╚═════════════◈'
       const buttons = [
 {buttonId: prefix +'sdfb ' + q, buttonText: {displayText: 'SD '}, type: 1},
 {buttonId: prefix +'hdfb ' + q, buttonText: {displayText: 'HD '}, type: 1},
@@ -290,7 +290,7 @@ mek = mek.messages[0]
 	      
 	      case 'hdfb' : 
 		      try {
-		if (!q) return await conn.sendMessage(from , { text: 'need fb link' }, { quoted: mek } )
+		if (!q) return await conn.sendMessage(from , { text: 'وراه نسيتي الرابط ديال الفيديو مجبتيهش من فايسبوك' }, { quoted: mek } )
 		const data = await axios.get('https://api-bobiz.herokuapp.com/api/fb?url=' + q)
 		const file = data.data[0]
 
@@ -309,7 +309,7 @@ mek = mek.messages[0]
 		      
 		        case 'sdfb' : 
 		      try {
-		if (!q) return await conn.sendMessage(from , { text: 'need fb link' }, { quoted: mek } )
+		if (!q) return await conn.sendMessage(from , { text: 'وراه نسيتي الرابط ديال الفيديو من فايسبوك' }, { quoted: mek } )
 		const data = await axios.get('https://api-bobiz.herokuapp.com/api/fb?url=' + q)
 		const file = data.data[1]
 
@@ -335,14 +335,14 @@ mek = mek.messages[0]
 			if (!q) return await conn.sendMessage(from , { text: 'need title' }, { quoted: mek } )   
 			const ytl = await ytinfo(q)
 			const buttons = [
-{buttonId: prefix +'ytmp3 ' + ytl.yuturl, buttonText: {displayText: 'MP3'}, type: 1},
-{buttonId: prefix +'ytmp4 ' + ytl.yuturl, buttonText: {displayText: 'MP4'}, type: 1},
+{buttonId: prefix +'ytmp3 ' + ytl.yuturl, buttonText: {displayText: 'بغيتيه صوت'}, type: 1},
+{buttonId: prefix +'ytmp4 ' + ytl.yuturl, buttonText: {displayText: 'بغيتيه فيديو'}, type: 1},
 ]
 			await conn.sendMessage(from, { image: {url: ytl.thumbnail  }, caption: ytl.msg , footer: config.FOOTER , buttons: buttons , headerType: 4} , { quoted: mek } )	
 			   
 		   } 
 		      catch(e) {
-		      await conn.sendMessage(from , { text: 'error\n\n' + e }, { quoted: mek } )
+		      await conn.sendMessage(from , { text: 'مول القناة ميغاكش تأنستاليه 🤝💔\n\n' + e }, { quoted: mek } )
 		      }
 		break 
 		      
@@ -350,13 +350,13 @@ mek = mek.messages[0]
 		      
 		 case 'ytmp3' :
 	      try {
-	     if (!q) return await conn.sendMessage(from , { text: 'need yt link' }, { quoted: mek } )      
+	     if (!q) return await conn.sendMessage(from , { text: 'حط لينا الرابط بغيتي نقلب بالدعاء' }, { quoted: mek } )      
 	     
              if ( !q.includes('youtu') ) return await conn.sendMessage(from , { text: 'need yt link' }, { quoted: mek } )  
-		const msg = '╔══[🐶𝙱𝙾𝙱𝙸𝚉 𝙱𝙾𝚃🐕]══╗\n╠   📥YOUTUBE MP3 DL📤 ║\n╚═════════════╝\n\n║ select mp3 type \n\n╚═════════════◈'
+		const msg = '╔══[🕋 YMTWINS 🕋]══╗\n╠   📥YOUTUBE DOWNLOADER 📤 ║\n╚═════════════╝\n\n║ select mp3 type \n\n╚═════════════◈'
       const buttons = [
-{buttonId: prefix +'ausong ' + q, buttonText: {displayText: 'AUDIO'}, type: 1},
-{buttonId: prefix +'dcsong ' + q, buttonText: {displayText: 'DOCUMENT '}, type: 1},
+{buttonId: prefix +'ausong ' + q, buttonText: {displayText: 'بغيتيو صوت'}, type: 1},
+{buttonId: prefix +'dcsong ' + q, buttonText: {displayText: 'بغيتو ملف '}, type: 1},
 ]
  await conn.sendMessage(from, {  text: msg , footer: config.FOOTER , buttons: buttons , headerType: 4} , { quoted: mek } )  
 		      
@@ -372,15 +372,15 @@ mek = mek.messages[0]
 	     if (!q) return await conn.sendMessage(from , { text: 'need yt link' }, { quoted: mek } )      
 	     
              if ( !q.includes('youtu') ) return await conn.sendMessage(from , { text: 'need yt link' }, { quoted: mek } )  
-		const msg = '╔══[🐶𝙱𝙾𝙱𝙸𝚉 𝙱𝙾𝚃🐕]══╗\n╠   📥YOUTUBE MP4 DL📤 ║\n╚═════════════╝\n\n║ select video quality\n\n╚═════════════◈'
+		const msg = '╔══[🕋YMTWINS🕋]══╗\n╠   📥YOUTUBE MP4 DOWNLOADER 📤 ║\n╚═════════════╝\n\n║ select video quality\n\n╚═════════════◈'
       const buttons = [
-{buttonId: prefix +'720vid ' + q, buttonText: {displayText: '720P'}, type: 1},
-{buttonId: prefix +'480vid ' + q, buttonText: {displayText: '480P '}, type: 1},
+{buttonId: prefix +'720vid ' + q, buttonText: {displayText: 'كاليطي ناضية'}, type: 1},
+{buttonId: prefix +'480vid ' + q, buttonText: {displayText: 'كاليطي عادية '}, type: 1},
 ]
  await conn.sendMessage(from, {  text: msg , footer: config.FOOTER , buttons: buttons , headerType: 4} , { quoted: mek } )  
 		      
 	      } catch(e) {
-		await conn.sendMessage(from , { text: 'error' }, { quoted: mek } )      
+		await conn.sendMessage(from , { text: 'مول الفيديو مبغاكش تانستاليه😶' }, { quoted: mek } )      
 	      }      
 	      break 
 		      
@@ -388,9 +388,9 @@ mek = mek.messages[0]
 		      
 		 case 'dcsong' :
 	      try {
-	     if (!q) return await conn.sendMessage(from , { text: 'need yt link' }, { quoted: mek } )      
+	     if (!q) return await conn.sendMessage(from , { text: 'جيب لينا رابط ديالو' }, { quoted: mek } )      
 	     
-             if ( !q.includes('youtu') ) return await conn.sendMessage(from , { text: 'need yt link' }, { quoted: mek } )  
+             if ( !q.includes('youtu') ) return await conn.sendMessage(from , { text: 'خاصك الرابط' }, { quoted: mek } )  
 		 let docsong = await ytmp3(q)
             const docsongdown = await conn.sendMessage(from , { text: config.SONG_DOWN }, { quoted: mek } )
             await conn.sendMessage(from, { delete: docsongdown.key })
@@ -401,7 +401,7 @@ mek = mek.messages[0]
     
 		      
 	      } catch(e) {
-		await conn.sendMessage(from , { text: 'error' }, { quoted: mek } )      
+		await conn.sendMessage(from , { text: 'شي حاجة تما' }, { quoted: mek } )      
 	      }      
 	      break  
 		      
@@ -409,7 +409,7 @@ mek = mek.messages[0]
 		      
 			 case 'ausong' :
 	      try {
-	     if (!q) return await conn.sendMessage(from , { text: 'need yt link' }, { quoted: mek } )      
+	     if (!q) return await conn.sendMessage(from , { text: 'عطينا الرابط يرضي عليك' }, { quoted: mek } )      
 	     
              if ( !q.includes('youtu') ) return await conn.sendMessage(from , { text: 'need yt link' }, { quoted: mek } )  
 	    let docsong = await ytmp3(q)
@@ -421,7 +421,7 @@ mek = mek.messages[0]
     
 		      
 	      } catch(e) {
-		await conn.sendMessage(from , { text: 'error' }, { quoted: mek } )      
+		await conn.sendMessage(from , { text: 'خطأ هادشي ' }, { quoted: mek } )      
 	      }      
 	      break   
 		      
@@ -472,8 +472,8 @@ await conn.sendMessage(from, { delete: docsongup.key })
 		try {
 var arama = await yts(q);
 } catch(e) {
-return await conn.sendMessage(from , { text: 'لم يتم العثور على اي شيء ' }, { quoted: mek } )
-}
+return await conn.sendMessage(from , { text: 'عييت نقلب مالقيت وللو ' }, { quoted: mek } )
+
 var mesaj = '';
 arama.all.map((video) => {
 mesaj += ' *🖲️' + video.title + '*\n🔗 ' + video.url + '\n\n'
@@ -491,7 +491,7 @@ await conn.sendMessage(from , { text: 'error' }, { quoted: mek } )
 	      case "apk" :
 	      case "findapk":
 		     try {
-			 if (!q) return await conn.sendMessage(from , { text: 'اين هو اسم الاتطبيق الذي تريد تحميله' }, { quoted: mek } )        
+			 if (!q) return await conn.sendMessage(from , { text: 'شنو سميت التطبيق ليبغيتي كتبها مورا الأمر' }, { quoted: mek } )        
 		     const data2 = await axios.get('https://api-bobiz.herokuapp.com/api/playstore?q=' + q)
 		     const data = data2.data
 		     if (data.length < 1) return await  conn.sendMessage(from, { text: e2Lang.N_FOUND }, { quoted: mek } )
@@ -504,14 +504,14 @@ await conn.sendMessage(from , { text: 'error' }, { quoted: mek } )
       });
   }
     const sections = [{
-      title: "البحث في بلاي ستور",
+      title: "قلب على شي تطبيق فبلايستور",
       rows: srh
   }]
     const listMessage = {
       text: " \n\n name : " + q + '\n\n ',
       footer: config.FOOTER,
-      title: '🐶BOBIZ BOT🐕 تحميل التطبيقات',
-      buttonText: "نتائج البحث اضغط هنا",
+      title: '🕋YMTWINS🕋أنستالي التطبيقات',
+      buttonText: "هادشي ليخرج لينا بلايستور",
       sections
   }
     await conn.sendMessage(from, listMessage, {quoted: mek })
@@ -533,8 +533,8 @@ await conn.sendMessage(from , { text: 'error' }, { quoted: mek } )
            const filedown = await conn.sendMessage(from , { text: config.FILE_UP }, { quoted: mek } )
 	  
 	 	 const app_link = await apk_link(n)
-	  if ( app_link.size.replace('MB' , '') > 200) return await conn.sendMessage(from , { text: 'التطبيق الذي تريده حجمه كبير لا يمكن لبوبيز ان يرسله الحد الاقصى هو 200 ميغا' }, { quoted: mek } )
-         if ( app_link.size.includes('GB')) return await conn.sendMessage(from , { text: ' التطبيق الذي تريده حجمه كبير لا يمكن لبوبيز ان يرسله الحد الاقصى هو 200 ميغا' }, { quoted: mek } )
+	  if ( app_link.size.replace('MB' , '') > 200) return await conn.sendMessage(from , { text: 'واواواواوا الدمار الشامل الى فتو 200 ميغا والله لا أنستاليتو بالرب 😂' }, { quoted: mek } )
+         if ( app_link.size.includes('GB')) return await conn.sendMessage(from , { text: ' فيين غادي فيناوا غادي متفوتش 200 ميغا ها العار ' }, { quoted: mek } )
 		  var ext = ''
 		  if (app_link.type.includes('Download XAPK')) { ext = '.xapk' } 
 		  else { ext = '.apk' }
@@ -542,7 +542,7 @@ await conn.sendMessage(from , { text: 'error' }, { quoted: mek } )
          await conn.sendMessage(from, { delete: filedown.key })
 		}
 		      catch(e) {
-await conn.sendMessage(from , { text: 'تعذر ارسال التطبيق آسف صديقي \n\n' + e }, { quoted: mek } )  
+await conn.sendMessage(from , { text: 'واتساب بلوكا هاد التطبيق قاليك ما فيهش الآمان 100٪ و كيدير هادشي على مصلحتك  \n\n' + e }, { quoted: mek } )  
 } 
 		      
 	      break      
@@ -553,32 +553,32 @@ await conn.sendMessage(from , { text: 'تعذر ارسال التطبيق آسف
 		case 'menu' :
 		case 'list' :      
 	        case 'panal' : 
-		 await conn.sendMessage(from , { audio : fs.readFileSync("./src/alive.mpeg") , mimetype : 'audio/mpeg' , ptt: true  } , { quoted: mek })
+		 await conn.sendMessage(from , { audio : fs.readFileSync("./src/alive.mpeg") , mimetype : 'audio/mpeg' , ptt: false  } , { quoted: mek })
 		      const msg = `╭────────────────────╮
-                  BOBIZ BOT
+                  YMTWINS
 ╰────────────────────╯
-╭────────────────────╮
-│ ❀  @noureddine_ouafy
-╰────────────────────╯
-www.instagram.com/noureddine_ouafy
+╭─────────────────────────╮
+│  💻مهدي أيت الحاج و يونس أمرير💻
+╰─────────────────────────╯
+www.instagram.com/elpotlood
 ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎
 ╭────────────────────╮
         الأوامــــــر : menu
 ╰────────────────────╯
 ╭────────────────────╮
-│  ⸙ .sticker         صناعة ملصقات
-│  ⸙ .apk             تحميل تطبيقات
-│  ⸙ .fb            التحميل من فيسبوك
-│  ⸙ .ig          التحميل من الانستغرام
-│  ⸙ .tiktok        التحميل من تيكتوك
-│  ⸙ .yt            التحميل من يوتوب
-│  ⸙ .yts           البحث في اليوتوب
-│  ⸙ .mediafire        ميديافاير " "
-│  ⸙ .stickget         حقوق الملصق
-│  ⸙ .alive      هل البوت شغال ام لا
-│  ⸙ .song           تحميل الموسيقى 
-╰────────────────────╯
-     ʙʏ ɴᴏᴜʀᴇᴅᴅɪɴᴇ ᴏᴜᴀғʏ`
+│  ⸙ .sticker         صايب الستيكرز
+│  ⸙ .apk             أنستالي من بلاي ستور
+│  ⸙ .fb            أنستالي من فايسبوك
+│  ⸙ .ig          أنستالي من الانستغرام
+│  ⸙ .tiktok        أنستالي من تيكتوك
+│  ⸙ .yt            أنستالي من يوتوب
+│  ⸙ .yts           قلب على شي حاجة فاليوتوب
+│  ⸙ .mediafire        أنستالي من ميديافاير
+│  ⸙ .stickget         كوپيرايت الملصق
+│  ⸙ .alive      واش البوت خدام ؟ ولا لا؟
+│  ⸙ .song           أنستالي الموسيقى 
+╰─────────────────
+بواسطة يونس أمرير و مهدي أيت الحاج❤️
 		      await conn.sendMessage(from , { text: msg }, { quoted: mek } )  
 		      
 		      break
@@ -587,10 +587,10 @@ www.instagram.com/noureddine_ouafy
 	      case 'owner' :
 		const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
             + 'VERSION:3.0\n' 
-            + `FN:` + 'noureddine_ouafy' + `\n` // full name
-            + 'TEL;type=CELL;type=VOICE;waid=' + '212605784394' + ':+' + '212605784394' + '\n' // WhatsApp ID + phone number
+            + `FN:+'YMTWINS' + `\n` // full name
+            + 'TEL;type=CELL;type=VOICE;waid=' + '212710075103' + ':+' + '212710075103' + '\n' // WhatsApp ID + phone number
             + 'END:VCARD'
- await conn.sendMessage(from,{ contacts: { displayName: 'noureddine_ouafy' , contacts: [{ vcard }]  }} , { quoted: mek })      
+ await conn.sendMessage(from,{ contacts: { displayName: 'YMTWINS' , contacts: [{ vcard }]  }} , { quoted: mek })      
 		      break 
  //_______________________________________________________________________________________________________________________________________________________   //		      
 		      
