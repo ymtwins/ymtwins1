@@ -1,4 +1,4 @@
-FROM aquabotwa/sanuwa-official:md-beta
+FROM ymtwins/sanuwa-official:md-beta
 
 RUN git clone https://github.com/bobizbotmd/BOBIZ-MD /root/bobiz
 WORKDIR /root/bobiz/
