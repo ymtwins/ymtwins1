@@ -11,11 +11,11 @@ DATABASE_URL = process.env.DATABASE_URL === undefined ? './tmp' : process.env.DA
 DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBUG);
 
 module.exports = {
-    SESSION: process.env.BOBIZ_SESSION === undefined ? '' : process.env.BOBIZ_SESSION,
+    SESSION: process.env.YMTWINS_SESSION === undefined ? '' : process.env.YMTWINS_SESSION,
     URL_1NAME: process.env.URL_1NAME === undefined ? '🎃Follow me on Instagram🎃' : process.env.URL_1NAME,
-    URL_1LINK: process.env.URL_1LINK === undefined ? 'http://instagram.com/noureddine_ouafy' : process.env.URL_1LINK,
+    URL_1LINK: process.env.URL_1LINK === undefined ? 'http://instagram.com/elpotlood' : process.env.URL_1LINK,
     URL_2NAME: process.env.URL_2NAME === undefined ? '✨Star on Github✨' : process.env.URL_2NAME,
-    URL_2LINK: process.env.URL_2LINK === undefined ? 'https://github.com/sanuwaofficial' : process.env.URL_2LINK,
+    URL_2LINK: process.env.URL_2LINK === undefined ? 'https://github.com/ymtwins' : process.env.URL_2LINK,
     FOOTER: process.env.FOOTER === undefined ? 'YMTWINS  instagram.com/elpotlood تابعني على الانستغرام ' : process.env.FOOTER,
     CAPTION: process.env.CAPTION === undefined ? 'ymtwins https://www.instagram.com/elpotlood  🕋' : process.env.CAPTION,
     ALIVEMSG: process.env.ALIVE_MESSAGE === undefined ? 'default' : process.env.ALIVE_MESSAGE,
