@@ -1,32 +1,32 @@
 {
-    "name": "BOBIZ - MD",
+    "name": "YMTWINS",
     "description": "BOBIZMD  - Makes it easy and fun to use Whatsapp.",
     "logo": "https://telegra.ph/file/201b5c02be1e336a29c60.jpg",
-    "keywords": ["whatsapp", "userbot", "bobiz", "bot", "ai" , "MD" ],
+    "keywords": ["whatsapp", "userbot", "ymtwins", "bot", "ai" , "MD" ],
     "repository": "https://github.com/bobizbotmd/BOBIZ-MD",
     "website":   "",
     "success_url": "",
     "stack": "container",
      "env": {
-            "BOBIZ_SESSION": {
+            "YMTWINS_SESSION": {
             "description": "qr session code",
             "required": true
              },
-             
+            
            
            "URL_1NAME": {
             "description": "",
-            "value": "🎃تـابعني على الانستغرام🎃" ,
+            "value": "🎃,دعمنا فأنستغرام🎃" ,
             "required": true
       },
            "URL_1LINK": {
             "description": "",
-            "value": "http://instagram.com/noureddine_ouafy" ,
+            "value": "http://instagram.com/elpotlood" ,
             "required": true
       },
      "URL_2NAME": {
             "description": "",
-            "value": "✨Star on Github سكريبت البوت✨" ,
+            "value": "✨Star on Github✨" ,
             "required": true
       },
        "URL_2LINK": {
@@ -48,37 +48,37 @@
      
        "SONG_DOWN": {
             "description": "song downloading text",
-            "value": "*📥جاري تحميل الأغنية...*" ,
+            "value": "*📥بلاتي واحد شوية عافاك...*" ,
             "required": true
       }, 
         "SONG_UP": {
             "description": "song uploading text",
-            "value": "*📤جاري ارسال الأغنية او الموسيقى...*" ,
+            "value": "*📤ها أمانتك ...*" ,
             "required": true
       },
           "VIDEO_DOWN": {
             "description": "video downloading text",
-            "value": "*📥جاري تحميل الفيديو...*" ,
+            "value": "*📥بلاتي واحد شوية عافاك...*" ,
             "required": true
       },
           "VIDEO_UP": {
             "description": "video uploading text",
-            "value": "*📤جاري ارسال الفيديو...*" ,
+            "value": "*📤ها هو الفيديو بغيتيه أمبورطي ولا تديه معك هههه هي هي...*" ,
             "required": true
       },
           "FILE_DOWN": {
             "description": "file downloading text",
-            "value": "*📥جاري تحميل الملف...*" ,
+            "value": "*📥بلاتي واحد شوية عفاك...*" ,
             "required": true
       },
           "FILE_UP": {
             "description": "file uploading text",
-            "value": "*📤جاري ارسال الملف ...*" ,
+            "value": "* واش أنا كنصيفط ليك الملف ونتا كتكركر...*" ,
             "required": true
       },
           "STIC_WM": {
             "description": "حقوق الملصق",
-            "value": "BOBIZ-MD" ,
+            "value": "AMARIRxMEHDI" ,
             "required": true
       }
          
