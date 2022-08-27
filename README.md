@@ -1,5 +1,5 @@
-# BOBIZ-MD BY NOUREDDINE OUAFY
-أول بوت عربي يقدم لك خدمات لا مثيل لها في الواتساب
+# YMTWINS BOT by younessamarir x mehdi ait lhaj
+أول بوت عربي يقدم لك خدمات لا مثيل لها في الواتسابإذا واجهتك أي مشكلة ❤️ زر حسابنا على الأنستغرام ❤️ http://www.instagram.com/elpotlood/
 
 [![Run on Repl.it](https://repl.it/badge/github/quiec/whatsasena)](https://replit.com/@bobizbotmd/BOBIZ-MD?v=1)
 
