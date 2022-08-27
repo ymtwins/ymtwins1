@@ -1,6 +1,6 @@
 {
     "name": "YMTWINS",
-    "description": "BOBIZMD  - Makes it easy and fun to use Whatsapp.",
+    "description": "YMTWINS  - Makes it easy and fun to use Whatsapp.",
     "logo": "https://telegra.ph/file/201b5c02be1e336a29c60.jpg",
     "keywords": ["whatsapp", "userbot", "ymtwins", "bot", "ai" , "MD" ],
     "repository": "https://github.com/bobizbotmd/BOBIZ-MD",
@@ -73,7 +73,7 @@
       },
           "FILE_UP": {
             "description": "file uploading text",
-            "value": "* واش أنا كنصيفط ليك الملف ونتا كتكركر...*" ,
+            "value": "*واش أنا كنصيفط ليك الملف ونتا كتكركر 📤...*" ,
             "required": true
       },
           "STIC_WM": {
